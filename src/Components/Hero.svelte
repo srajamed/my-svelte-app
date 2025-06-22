@@ -96,7 +96,7 @@
   <!-- HERO SECTION -->
   <section class="hero">
     <h1>
-      Student interested in medicine. My interests include<br />
+      I'm a student interested in medicine. My interests include<br />
       surgical research, healthcare economics/policy,<br />
       and creative medical writing.
     </h1>
