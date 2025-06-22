@@ -2,30 +2,36 @@ html, body {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body {
 	font-family: 'Inter', sans-serif;
 	color: #eae7dc; /* light eggshell tone */
-	margin: 0;
+	background-color: #2f3f40;
 	padding: 8px;
-	box-sizing: border-box;
-  }
+}
 
-
+/* Links */
 a {
-	color: rgb(0,100,200);
+	color: rgb(0, 100, 200);
 	text-decoration: none;
+	transition: color 0.3s ease;
 }
 
 a:hover {
 	text-decoration: underline;
+	color: #f6c177;
 }
 
 a:visited {
-	color: rgb(0,80,160);
+	color: rgb(0, 80, 160);
 }
 
+/* Forms */
 label {
 	display: block;
 }
@@ -33,32 +39,86 @@ label {
 input, button, select, textarea {
 	font-family: inherit;
 	font-size: inherit;
-	-webkit-padding: 0.4em 0;
 	padding: 0.4em;
-	margin: 0 0 0.5em 0;
+	margin-bottom: 0.5em;
 	box-sizing: border-box;
 	border: 1px solid #ccc;
 	border-radius: 2px;
+	width: 100%;
+	max-width: 100%;
 }
 
 input:disabled {
 	color: #ccc;
 }
 
+/* Buttons */
 button {
 	color: #333;
 	background-color: #f4f4f4;
 	outline: none;
+	cursor: pointer;
+	transition: all 0.2s ease;
 }
 
 button:disabled {
 	color: #999;
+	background-color: #eee;
+	cursor: not-allowed;
 }
 
 button:not(:disabled):active {
 	background-color: #ddd;
+	transform: scale(0.98);
 }
 
 button:focus {
 	border-color: #666;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+	body {
+		padding: 4px;
+	}
+
+	.hero h1 {
+		font-size: 2rem !important;
+	}
+
+	.hero p {
+		font-size: 1rem !important;
+	}
+
+	.nav-links {
+		flex-direction: column;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.post-entry {
+		margin: 2rem auto;
+		padding: 0 1rem;
+	}
+
+	.post-entry img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}
+
+	.post-title {
+		font-size: 1.4rem !important;
+	}
+
+	.post-subtitle {
+		font-size: 1rem !important;
+		text-align: center;
+	}
+
+	footer {
+		padding: 2rem 1rem;
+		text-align: center;
+		font-size: 0.85rem;
+	}
 }

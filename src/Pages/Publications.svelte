@@ -120,6 +120,39 @@
     color: #999;
     font-size: 0.9rem;
   }
+
+  /* 📱 Mobile Optimization */
+  @media (max-width: 600px) {
+    main {
+      padding: 4rem 1rem 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .section-button {
+      font-size: 1.3rem;
+      padding: 1rem 0;
+    }
+
+    .chevron {
+      font-size: 1.1rem;
+    }
+
+    .paper {
+      font-size: 1rem;
+    }
+
+    .pdf-button {
+      font-size: 0.9rem;
+      padding: 0.6rem 1.2rem;
+    }
+
+    footer {
+      font-size: 0.8rem;
+    }
+  }
 </style>
 
 <main>
