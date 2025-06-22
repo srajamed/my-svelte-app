@@ -132,7 +132,7 @@
 <!-- HERO SECTION -->
 <section class="hero">
   <h1>
-    I'm an aspiring medical student studied at Boston University and UCSF. My interests include<br />
+    I'm an aspiring medical student. Graduate from Boston University and UCSF. My interests include<br />
     surgical research, healthcare economics/policy,<br />
     and creative medical writing.
   </h1>
@@ -170,5 +170,3 @@
     </div>
   </div>
 </section>
-
-
