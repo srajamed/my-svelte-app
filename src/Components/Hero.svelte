@@ -1,27 +1,41 @@
 <style>
-  .hero {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.3)
-      ),
-      url('/hero-bg.jpg');
+  /* HERO WRAPPER WITH FADE EFFECT */
+  .hero-wrapper {
+    position: relative;
+    height: 100vh;
+    background-image: url('/hero-bg.jpg');
     background-size: cover;
     background-position: center;
-    color: #f5f5f0;
-    padding: 8rem 2rem 4rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    z-index: 1;
     font-family: 'Inter', sans-serif;
-    width: 100%;
+    padding: 2rem;
     box-sizing: border-box;
   }
 
-  .hero h1 {
+  .hero-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #2f3f40 95%);
+    z-index: 2;
+  }
+
+  .hero-content {
+    z-index: 3;
     font-size: 2rem;
     line-height: 1.6;
     max-width: 900px;
-    margin: 0 auto;
+    padding: 0 1rem;
   }
 
+  /* ABOUT SECTION */
   .about-wrapper {
     background-color: #2f3f40;
     padding: 4rem 0;
@@ -96,6 +110,7 @@
     transition: transform 0.2s ease;
   }
 
+  /* Prevent scroll bugs */
   :global(body) {
     margin: 0;
     overflow-x: hidden;
@@ -103,19 +118,14 @@
 
   /* 📱 Mobile Optimization */
   @media (max-width: 768px) {
-    .hero {
-      padding: 6rem 1rem 3rem;
-    }
-
-    .hero h1 {
+    .hero-content {
       font-size: 1.5rem;
-      padding: 0 1rem;
     }
 
     .about-container {
       flex-direction: column-reverse;
-      gap: 2rem;
       text-align: center;
+      gap: 2rem;
       padding: 0 1.2rem;
     }
 
@@ -130,12 +140,12 @@
 </style>
 
 <!-- HERO SECTION -->
-<section class="hero">
-  <h1>
+<section class="hero-wrapper">
+  <div class="hero-content">
     I'm a student interested in medicine. My interests include<br />
     surgical research, healthcare economics/policy,<br />
     and creative medical writing.
-  </h1>
+  </div>
 </section>
 
 <!-- ABOUT SECTION -->
